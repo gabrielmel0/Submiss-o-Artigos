@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<meta charset="UTF-8">
+<!--Import Google Icon Font-->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<!--Import materialize.css-->
+<link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+
+<!--Let browser know website is optimized for mobile-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Evento</title>
+</head>
+
+<body>
+  <a href="">Submeter artigor</a>
+	<h4 align="center">Detalhes de Eventos</h4>
+  <div th:each="evento:${evento}">
+    <div class="row">
+     <form method="post" action="" class="container">
+		      Usuário Responsável: <input type="text" th:value="${evento.usuario}" name="usuario"/>
+		      Nome: <input type="text" th:value="${evento.nome}" name="nome"/>
+		      Data: <input type="date" th:value="${evento.data}" name="data"/>
+		      Data de Abertura: <input type="date" th:value="${evento.abertura}" name="abertura"/>
+		      Data de Fechamento: <input type="date" th:value="${evento.fechamento}" name="fechamento"/>
+    		  <button type="submit" class="waves-effect waves-light btn" >Alterar</button>
+	</form>
+</div>
+</div>
+  <!--JavaScript at end of body for optimized loading-->
+  <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+</body>
+
+</html>
